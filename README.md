@@ -1,1 +1,2 @@
 # motorway
+npm i
