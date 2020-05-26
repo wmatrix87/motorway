@@ -23,7 +23,7 @@ const loop = async (startFromPage, pageCount, token, visitorsBatch = []) => {
   const maxPageCount = Math.ceil(maxTotalCount / MAX_LENGTH);
 
   if (maxPageCount > pageCount) {
-    await loop(pageCount + 1, maxPageCount, token, visitorsBatch)
+    return loop(pageCount + 1, maxPageCount, token, visitorsBatch)
   }
   
   return visitorsBatch;
